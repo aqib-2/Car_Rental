@@ -23,8 +23,8 @@ const VehicleModels = () => {
                       <p className='text-lg font-bold'>&#8377;{data.price}/day</p>
                      </div>
                      <div className='flex flex-row px-4 justify-between text-slate-500 text-xl font-semibold'>
-                       <p> &#128663;&nbsp;&nbsp;{data.model}</p>
-                       <p>{data.year}  &#128663; </p>
+                       <p>&#128663; {data.model}</p>
+                       <p>{data.year}  &#128663;</p>
                      </div>
                      <div className='flex flex-row px-4 pb-5 justify-between text-slate-500 text-xl font-semibold border-b-2'>
                        <p>&#128663; {data.transmission}</p>
