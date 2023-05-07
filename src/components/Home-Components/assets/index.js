@@ -9,7 +9,7 @@ import harrier from "./Tata-harrier.jpeg";
 import endeavour from "./Ford-endeavour.jpg";
 import fortuner from "./Fortuner.jpeg";
 import creta from "./Hyundai_Creta.jpg";
-import ertiga from './Maruti-ertiga.jpg';
+import ertiga from './Maruti-Ertiga.jpg';
 import carFleetImg from "./cars-image.png";
 import smartCar from "./smart-car.svg";
 import coinHand from "./coin-hand.svg";
