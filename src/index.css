@@ -4,6 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Scrollbar Styling */
+html{
+    scrollbar-width: thin;
+    scrollbar-color: #CD2132 transparent;
+}
+::-webkit-scrollbar{
+    width: 1.5vw;
+    height: 10vw;
+}
+::-webkit-scrollbar-thumb{
+    background: #CD2132;
+}
+
 *{
     font-family: 'Poppins', sans-serif;
 }
