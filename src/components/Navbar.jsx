@@ -1,12 +1,15 @@
 import {useState} from 'react';
 import {logo,close,menu} from "../assets";
-import Button from './Button';
+import Button from './ReusableComponents/Button';
 import NavList from './NavList';
 import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const navigate=useNavigate();
   const [toggle, setToggle] = useState(true);
+  const handleSignIn = (route) => {
+    route && navigate(`/${route}`);
+  }
   return (
     
     <nav className="w-full flex py-5 flex-row justify-between items-center">
@@ -23,8 +26,8 @@ const Navbar = () => {
       </ul>
 
       <div className='hidden flex-shrink-0 lg:flex lg:mr-5'>
-        <a href="#" className='py-3 px-10 font-semibold text-lg hover:text-reddish'>Sign In</a>
-        <Button text="Register" width="px-10"/>
+        <button onClick={() => handleSignIn('login')} className='py-3 px-10 font-semibold text-lg hover:text-reddish'>Sign In</button>
+        <Button text="Register" width="px-10" onClickHandler={() => handleSignIn('signup')}/>
       </div>
        
 

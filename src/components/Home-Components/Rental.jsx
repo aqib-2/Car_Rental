@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { carModels } from './assets'
-import Button from '../Button'
+import Button from '../ReusableComponents/Button'
+import { useNavigate } from 'react-router-dom';
 const Rental = () => {
-  const [carName,setCarName] = useState("xuv");
+  const [carName,setCarName] = useState("xuv");6
+  const navigate = useNavigate();
   return ( 
     <div >
         <h3 className='text-center text-2xl font-bold my-5'>Vehicle Models</h3>
@@ -37,9 +39,7 @@ const Rental = () => {
                 </tbody>
                </table>
                <div className='my-5'>
-                  <a href='#booking'>
-                     <Button text="RESERVE NOW" width="w-[90%] mx-4"/>
-                  </a>
+                  <Button text="RESERVE NOW" width="w-[90%] mx-4" onClickHandler={() => navigate('/dashboard')}/>
                </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import { carIcon,calendarIcon,locationIcon } from "./assets";
-import Button from "../Button";
+import Button from "../ReusableComponents/Button";
 
 const Booking = () => {
   return (

@@ -22,6 +22,13 @@ import mahindra from "./wp-mahindra-xuv.jpg";
 import suzuki from "./wp-suzuki-ertiga.jpg";
 import tata from "./wp-tata-harrier.jpg";
 import toyota from "./wp-toyota-fortuner.jpg";
+import NotFoundImage from "./404Page.png";
+import ProfileIcon from "./profileicon.svg";
+import EngineIcon from './engine.svg';
+import FuelIcon from './fuel.svg';
+import PhotoIcon from './photo.svg';
+import RupeeIcon from "./rupee.svg";
+import gridPattern from "./gridpattern.svg";
 
 const teamData = [
     { 
@@ -122,5 +129,12 @@ export {
     kane,
     sanju,
     teamData,
-    carData
+    carData,
+    NotFoundImage,
+    ProfileIcon,
+    RupeeIcon,
+    PhotoIcon,
+    FuelIcon,
+    EngineIcon,
+    gridPattern
 }

@@ -10,7 +10,10 @@ export default {
     },
     extend: {
       colors:{
-        reddish: '#CD2132'
+        reddish: '#CD2132',
+        primary : '#ce2233',
+        secondary : '#e04050',
+        tertiary  : '#e35563'
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

@@ -1,6 +1,6 @@
 import {Navbar,Footer} from "./index"
 import { bgImage,carData } from '../assets'
-import Button from './Button'
+import Button from './ReusableComponents/Button'
 const VehicleModels = () => {
   return (
     <>
