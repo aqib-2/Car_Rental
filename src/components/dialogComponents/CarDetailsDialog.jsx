@@ -4,7 +4,7 @@ import { setSelectedCar } from '../../store/slices/dashboardSlice';
 import { closeDialog } from '../../store/slices/dialogSlice';
 import { formatDateString, loadScript } from '../../utils/helperFunctions';
 import Button from '../ReusableComponents/Button';
-import { useCreateBookingMutation, useCreateOrderMutation, useVerifyOrderMutation } from '../../api/endpoints/booking';
+import { useCancelPaymentMutation, useCreateBookingMutation, useCreateOrderMutation, useVerifyOrderMutation } from '../../api/endpoints/booking';
 import { toast } from 'react-toastify';
 
 const CarDetailsDialog = () => {
@@ -14,6 +14,7 @@ const CarDetailsDialog = () => {
     const [createBooking] = useCreateBookingMutation();
     const [createOrder] = useCreateOrderMutation();
     const [verifyOrder] = useVerifyOrderMutation();
+    const [cancelPayment] = useCancelPaymentMutation();
 
     const [btnDisabled,setBtnDisabled] = useState();
 
@@ -107,6 +108,17 @@ const CarDetailsDialog = () => {
             theme: {
                 color: "#CD2132",
             },
+            modal:{
+              confirm_close: true,
+              ondismiss:async (reason) => {
+                const cancelResponse = await cancelPayment(paymentId).unwrap();
+                if(cancelResponse.statusCode === 200){
+                  toast.error("Payment canceled");
+                }else{
+                  toast.error("Payment canceled. Contact support with your booking ID")
+                }
+              }
+            }
         };
 
         const paymentObject = new window.Razorpay(options);

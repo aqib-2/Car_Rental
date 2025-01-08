@@ -56,7 +56,6 @@ const AdminHeader = () => {
             <ul className='hidden items-center space-x-8 font-[600] text-md lg:flex'>
                 <li className="hover:text-reddish cursor-pointer" onClick={() => handleScreen("dahboard")}>Dashboard</li>
                 <li className="hover:text-reddish cursor-pointer" onClick={() => handleScreen("lookups")}>lookups</li>
-                <li className="hover:text-reddish cursor-pointer" onClick={() => handleScreen("bookings")}>Bookings</li>
             </ul>
 
             <button

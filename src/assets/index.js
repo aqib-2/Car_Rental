@@ -29,6 +29,7 @@ import FuelIcon from './fuel.svg';
 import PhotoIcon from './photo.svg';
 import RupeeIcon from "./rupee.svg";
 import gridPattern from "./gridpattern.svg";
+import soldOut from "./soldout.svg";
 
 const teamData = [
     { 
@@ -136,5 +137,6 @@ export {
     PhotoIcon,
     FuelIcon,
     EngineIcon,
-    gridPattern
+    gridPattern,
+    soldOut
 }

@@ -36,7 +36,20 @@ export const bookingApi = api.injectEndpoints({
           method:'GET'
       })
     }),
+    cancelPayment:builder.mutation({
+      query: (paymentId) => ({
+          url: `/payment/cancel`,
+          method:'PUT',
+          params:{paymentId}
+      })
+    }),
+    getDashboardData:builder.query({
+      query: () => ({
+          url: `/booking/getdashboarddata`,
+          method:'GET'
+      })
+    }),
   }),
 });
     
-export const {useLazyGetAvailableCarsQuery,useCreateBookingMutation,useCreateOrderMutation,useVerifyOrderMutation,useGetUserBookingsQuery} = bookingApi;
+export const {useLazyGetAvailableCarsQuery,useCreateBookingMutation,useCreateOrderMutation,useVerifyOrderMutation,useGetUserBookingsQuery,useCancelPaymentMutation,useGetDashboardDataQuery} = bookingApi;

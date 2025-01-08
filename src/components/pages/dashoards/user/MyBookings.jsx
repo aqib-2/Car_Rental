@@ -45,7 +45,7 @@ const BookingCard = ({ booking }) => {
         <p className='text-sm'>
           <strong>Status:</strong>{' '}
           <span
-            className={`px-2 uppercase py-1 rounded text-white ${
+            className={`px-2 uppercase py-1 rounded ${
               booking.status === 'confirmed'
                 ? 'text-green-500'
                 : booking.status === 'cancelled'

@@ -14,11 +14,13 @@ import {
 } from "../../../../store/slices/dashboardSlice";
 import { useLazyGetAvailableCarsQuery } from "../../../../api/endpoints/booking";
 import { openDialog } from "../../../../store/slices/dialogSlice";
+import { soldOut } from "../../../../assets";
 
 const UserDashboard = () => {
   const dispatch = useDispatch();
 
   const [locationOptions, setLocationOptions] = useState([]);
+  const [searchClicked,setSearchClicked] = useState(false);
   const { selectedLocation, selectedFromDate, selectedToDate, availableCars, allLocations } = useSelector((state) => state.root.dashboard);
 
   useGetAllLocationsQuery({}, { refetchOnMountOrArgChange: true });
@@ -42,6 +44,7 @@ const UserDashboard = () => {
       dispatch(setSelectedLocation(value));
     } else if (name === "fromDate") {
       dispatch(setSelectedFromDate(value));
+      dispatch(setSelectedtToDate(''));
     } else {
       dispatch(setSelectedtToDate(value));
     }
@@ -56,6 +59,7 @@ const UserDashboard = () => {
   };
 
   const handleSearch = async () => {
+    setSearchClicked(true);
     if (!getBtnDisabled()) {
       try {
         const location = allLocations.find(
@@ -88,7 +92,6 @@ const UserDashboard = () => {
     }
   }, [allLocations]);
 
-  console.log(selectedFromDate, selectedToDate, selectedLocation);
   return (
     <div>
       <UserHeader />
@@ -142,11 +145,24 @@ const UserDashboard = () => {
       </div>
 
       <div className="my-5 space-y-5">
+        {
+          !searchClicked && 
+          <p className="text-center text-4xl text-reddish font-bold mt-40">"Drive Your Journey – Explore, Rent, and Go!"</p>
+        }
         {availableCars.map((car) => (
           <div className="w-11/12 mx-auto border rounded-xl" key={car._id}>
             <AvailableCar car={car} handleRent={handleRent}/>
           </div>
         ))}
+        {(availableCars.length === 0 && searchClicked ) && 
+        (<div className="mt-10 w-full flex flex-col justify-center items-center">
+          <img
+            src={soldOut}
+            alt="soldOut"
+            className="w-1/2"
+          />
+          <p className="text-reddish my-5 font-semibold w-2/3 text-center text-2xl">Out of cars for your dates—guess everyone had the same great idea!</p>
+          </div>)}
       </div>
     </div>
   );

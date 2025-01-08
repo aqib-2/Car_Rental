@@ -51,7 +51,7 @@ const SignUp = () => {
       try{
        let payload = {
         name,
-        email,
+        email : email.toLowerCase(),
         password
        }
        const response = await register(payload).unwrap();
