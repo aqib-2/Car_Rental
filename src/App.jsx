@@ -4,7 +4,6 @@ import { Home,AboutUs,VehicleModels,Testimonials,Team,ContactUs } from "./compon
 import ProtectedRoute from './utils/ProtectedRoute';
 import Login from './components/pages/Login';
 import SignUp from './components/pages/SignUp';
-import NotFoundPage from './components/pages/NotFoundpage';
 import UserDashboard from './components/pages/dashoards/user/UserDashboard';
 import AdminDashboard from './components/pages/dashoards/admin/AdminDashboard';
 import ReusableDialog from './components/dialogComponents/ReusableDialog';
@@ -30,7 +29,6 @@ function App() {
                 <Route path='/bookings' element={<MyBookings/>}/>
                 <Route path='/admindashboard' element={<AdminDashboard/>}/>
               </Route>
-              <Route path='/error' element={<NotFoundPage/>}/>
             </Routes>
           </BrowserRouter>
           <ReusableDialog />
