@@ -11,7 +11,7 @@ html{
 }
 ::-webkit-scrollbar{
     width: .5vw;
-    height: 10vw;
+    height: .5vw;
 }
 ::-webkit-scrollbar-thumb{
     background: #CD2132;

@@ -51,7 +51,7 @@ const Login = () => {
 
       try {
         let payload = {
-          email: loginEmail,
+          email: loginEmail.toLowerCase(),
           password:loginPassword,
         }
         

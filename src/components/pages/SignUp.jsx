@@ -106,7 +106,7 @@ const SignUp = () => {
 
             <Button text="Sign Up" width="w-full" disabled={getBtnDisabled()} onClickHandler={handleSignUp}/>
             
-            <p className='text-center text-sm'>Already a user? Please <button onClick={() => navigate('/login')} className='text-reddish underline'>login</button></p>
+            <p className='text-center text-sm'>Already a user?Please <button onClick={() => navigate('/login')} className='text-reddish underline'>login</button></p>
           </div>
         </div>
       </div>

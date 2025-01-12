@@ -49,7 +49,18 @@ export const bookingApi = api.injectEndpoints({
           method:'GET'
       })
     }),
+    getBookingsData:builder.query({
+      query: (payload) => ({
+          url: `/booking/getBookingData`,
+          method:'GET',
+          params :  {
+            search : payload?.search ?? '',
+            page : payload?.page ?? 1,
+            locationId : payload?.locationId ?? ''
+          }
+        })
+    }),
   }),
 });
     
-export const {useLazyGetAvailableCarsQuery,useCreateBookingMutation,useCreateOrderMutation,useVerifyOrderMutation,useGetUserBookingsQuery,useCancelPaymentMutation,useGetDashboardDataQuery} = bookingApi;
+export const {useLazyGetAvailableCarsQuery,useCreateBookingMutation,useCreateOrderMutation,useVerifyOrderMutation,useGetUserBookingsQuery,useCancelPaymentMutation,useGetDashboardDataQuery,useGetBookingsDataQuery,useLazyGetBookingsDataQuery} = bookingApi;
