@@ -6,7 +6,7 @@ Welcome to the Car Rental Application! This platform allows users to browse, sel
 
 - **User Authentication**: Secure login and registration system for users.
 - **Car Listings**: Browse through a variety of available cars with detailed information.
-- **Booking System**: Reserve cars for specific dates and times.
+- **Booking System**: Reserve cars for specific dates by making the payment.
 - **Admin Panel**: Manage car listings, bookings, and user information.
 - **Responsive Design**: Accessible on various devices, including desktops, tablets, and smartphones.
 
@@ -34,5 +34,5 @@ To explore the application's features, you can use the following test user crede
 
 1. **Register or Login**: Create a new account or log in with existing credentials.
 2. **Browse Cars**: View the list of available cars with details like model, price, and availability.
-3. **Make a Booking**: Select desired car, choose rental dates, and confirm the booking.
+3. **Make a Booking**: Select desired car, choose rental dates,make the payment and confirm the booking.
 4. **Manage Bookings**: View and manage your current and past bookings in the user dashboard.
